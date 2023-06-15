@@ -4,16 +4,16 @@ import { RootState } from "./store";
 
 interface CounterState {
     value: number
-}
+};
 
 const initialState: CounterState  ={
-    value: 0
+    value: 0,
 }
 
- const contadorSlice=createSlice({
+export const contadorSlice=createSlice({
     name: "contador",
     initialState,
-    reducers:{
+    reducers: {
         agregarCantidad: (state, action: PayloadAction<number>)=>{
             state.value+=action.payload;
         },
@@ -23,8 +23,8 @@ const initialState: CounterState  ={
     }
 })
 
-export default contadorSlice
+//export default contadorSlice
 
-export const {agregarCantidad, quitarCantidad}=contadorSlice.actions
+export const { agregarCantidad, quitarCantidad }=contadorSlice.actions
 
 export const valorContador  = (state: RootState) => state.counter.value
