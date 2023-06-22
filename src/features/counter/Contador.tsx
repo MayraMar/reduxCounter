@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { agregarCantidad, quitarCantidad, resetear } from "../redux/contadorSlice";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { agregarCantidad, quitarCantidad, resetear } from "../../redux/contadorSlice";
 //import { valorContador } from "../redux/contadorSlice";
 
 interface Action {
