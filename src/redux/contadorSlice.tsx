@@ -19,12 +19,15 @@ export const contadorSlice=createSlice({
         },
         quitarCantidad: (state,action: PayloadAction<number>)=>{
             state.value-=action.payload;
+        },
+        resetear: (state)=>{
+            state.value=0;
         }
     }
 })
 
 //export default contadorSlice
 
-export const { agregarCantidad, quitarCantidad }=contadorSlice.actions
+export const { agregarCantidad, quitarCantidad, resetear }=contadorSlice.actions
 
 export const valorContador  = (state: RootState) => state.counter.value
